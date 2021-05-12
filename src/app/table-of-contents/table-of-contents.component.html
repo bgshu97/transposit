@@ -1,0 +1,28 @@
+<p>table-of-contents works!</p>
+
+<div *ngFor="let item of parsedJson">
+    <ul *ngIf="item.h1" style="padding-left:20px">
+        <li>
+            <a href="#{{item.h1}}">{{item.h1}}</a>
+        </li>
+        <ul *ngFor="let i of item.h2" style="padding-left:20px">
+            <li>
+                <a href="#{{i}}">{{i}}</a>
+            </li>
+            <ul *ngFor="let j of item.h3" style="padding-left:20px">
+                <li>
+                    <a href="#{{j}}">{{j}}</a>
+                </li>
+            </ul>
+        </ul>
+    </ul>
+</div>
+
+<h1 id="header 1">header 1</h1>
+<h2 id="header 2">header 2</h2>
+<h3 id="header 3">header 3</h3>
+<h3 id="header 3 21">header 3 21</h3>
+<h1 id="article 1">article 1</h1>
+<h2 id="some more info">some more info</h2>
+<h2 id="equally important info">equally important info</h2>
+<h1 id="unique header">unique header</h1>
